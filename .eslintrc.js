@@ -36,6 +36,7 @@ module.exports = {
         alphabetize: { order: "asc", caseInsensitive: true },
       },
     ],
+    "react/no-unstable-nested-components": "off",
   },
   settings: {
     react: {
