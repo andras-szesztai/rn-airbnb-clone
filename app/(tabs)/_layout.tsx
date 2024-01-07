@@ -32,7 +32,7 @@ const Layout = () => {
       screenOptions={{
         tabBarActiveTintColor: Colors.primary,
         tabBarLabelStyle: {
-          fontFamily: "mon-bold",
+          fontFamily: "mon-b",
         },
       }}
     >
