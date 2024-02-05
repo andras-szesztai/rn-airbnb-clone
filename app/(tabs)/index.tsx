@@ -1,13 +1,32 @@
-import { Link } from "expo-router";
+import { Stack } from "expo-router";
 import React from "react";
 import { View } from "react-native";
+import { StyleSheet } from "react-native";
+
+import { ExploreHeader } from "@/components/ExploreHeader/ExploreHeader";
+import { Listings } from "@/components/Listings/Listings";
 
 export default function Page() {
   return (
-    <View>
-      <Link href="/(modals)/login">Login</Link>
-      <Link href="/(modals)/booking">Booking</Link>
-      <Link href="/listing/122">Listing</Link>
+    <View style={styles.container}>
+      <Stack.Screen
+        options={{
+          header: () => (
+            <ExploreHeader
+              onCategoryChanged={(category: string) => {
+                console.log(category);
+              }}
+            />
+          ),
+        }}
+      />
+      <Listings />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

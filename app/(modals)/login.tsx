@@ -72,14 +72,6 @@ export default function Page() {
         <View style={styles.separator} />
       </View>
       <View style={styles.outlineButtonsContainer}>
-        <TouchableOpacity style={styles.outlineButton}>
-          <Ionicons
-            name="call-outline"
-            size={24}
-            style={defaultStyles.buttonIcon}
-          />
-          <Text style={styles.outlineButtonText}>Continue with Phone</Text>
-        </TouchableOpacity>
         <TouchableOpacity
           style={styles.outlineButton}
           onPress={() => onSelectAuth(Strategy.Apple)}
